@@ -22,6 +22,9 @@ module.exports = {
     fontFamily: {
       poppins: "var(--font-poppins)",
     },
+    backgroundImage: {
+      fondo: "url(/assets/bg.png)"
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",

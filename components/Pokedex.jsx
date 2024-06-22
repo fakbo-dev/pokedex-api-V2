@@ -1,7 +1,5 @@
-
-
-const Pokedex = () => {
-
+import Pokemon from "./Pokemon";
+const Pokedex = ({ pokemons, loading }) => {
 
     return (
         <section className="mt-[80px] xl:mt-[100px]">
@@ -13,10 +11,19 @@ const Pokedex = () => {
                     <div>paginacion</div>
                 </div>
 
-                {/* Grid */}
-                <div className="grid grid-cols-3 gap-3">
+                {loading ? (
+                    <div>Cargando...</div>
+                ) : (
+                    // grid
+                    <div className="grid grid-cols-3 gap-3">
+                        {pokemons && pokemons.map((pokemon, i) => (
+                            <div key={i}>
+                                <Pokemon pokemon={pokemon} />
+                            </div>
+                        ))}
+                    </div>
+                )}
 
-                </div>
             </div>
         </section>
     );
