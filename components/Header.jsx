@@ -3,10 +3,10 @@ import Image from "next/image"
 const Header = () => {
     return (
         <header className="py-8 xl:py-12">
-            <nav className="container mx-auto flex justify-between items-center">
+            <nav className="container mx-auto flex justify-between items-center bg-white">
                 {/* Logo */}
                 <div className="relative">
-                    <Link href="https://pokeapi.co/">
+                    <Link href="https://pokeapi.co/" target="_BLANK">
                         <Image
                             src="/assets/logo.png"
                             priority
