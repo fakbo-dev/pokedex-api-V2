@@ -4,17 +4,15 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { searchPokemon } from "./Api";
 import Image from "next/image"
-const Searchbar = () => {
+const Searchbar = ({ onSearchHandler }) => {
     const [text, setText] = useState("");
-    const [pokemon, setPokemon] = useState();
     const handlePokemon = (e) => {
         setText((t) => t = e.target.value);
-    }
-    const onSearchHandler = async (pokemon) => {
-        const result = await searchPokemon(pokemon);
-        setPokemon(result);
-    };
 
+        if (e.target.value.length === 0) {
+            onSearchHandler(undefined);
+        }
+    }
     const handleButtonClick = () => {
         onSearchHandler(text);
     };
@@ -33,22 +31,6 @@ const Searchbar = () => {
                 <div>
                     <Button variant="destructive" onClick={handleButtonClick}>Busca tu Pokemon</Button>
                 </div>
-
-                {pokemon && (
-                    <>
-                        <div>nombre: {pokemon.name}</div>
-                        <div>peso: {pokemon.weight}</div>
-                        <Image
-                            src={pokemon.sprites.front_default}
-                            alt={pokemon.name}
-                            title={pokemon.name}
-                            priority
-                            quality={100}
-                            className="w-auto h-auto"
-                            width={100}
-                            height={100} />
-                    </>
-                )}
             </div>
         </section>
     )
