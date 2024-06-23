@@ -14,7 +14,7 @@ const Searchbar = ({ onSearchHandler }) => {
         }
     }
     const handleButtonClick = () => {
-        onSearchHandler(text);
+        onSearchHandler(text.toLowerCase());
     };
 
     return (
