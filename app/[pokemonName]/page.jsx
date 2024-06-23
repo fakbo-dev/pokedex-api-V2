@@ -46,7 +46,7 @@ const PokemonPage = async ({ params }) => {
                             return (
                                 <div className="flex items-stretch w-[500px]" key={statsName}>
                                     <h3 className="p-3 w-2/4 text-1xl font-extrabold">{statsName}: {statsValue}</h3>
-                                    <Progress value={statsValue} className="w-2/4 m-auto" />
+                                    <Progress value={statsValue} className="w-2/4 m-auto" max={150} />
                                 </div>
                             )
 
