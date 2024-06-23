@@ -42,7 +42,15 @@ const Pokedex = ({ pokemons, loading, page, totalPages, setPage }) => {
                         ))}
                     </div>
                 )}
-
+                <div className="flex justify-between items-center text-black font-bold mt-4">
+                    <h1 className="text-2xl xl:text-4xl text-slate-950">fakbo Dev</h1>
+                    <Pagination
+                        page={page + 1}
+                        totalPages={totalPages}
+                        nextClick={handleNext}
+                        prevClick={handlePrev}
+                    />
+                </div>
             </div>
         </section>
     );
