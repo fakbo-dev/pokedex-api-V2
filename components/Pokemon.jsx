@@ -32,7 +32,7 @@ const Pokemon = ({ pokemon }) => {
                 <Image
                     src={pokemonUrl}
                     alt={pokemon.name}
-                    className=""
+                    className="w-100 h-100"
                     width={100}
                     height={100}
                 />
@@ -40,10 +40,13 @@ const Pokemon = ({ pokemon }) => {
 
             {/* Footer */}
             <CardFooter>
-                <div className="flex justify-around items-center w-full">
-                    {pokemon.types.map((type, i) => (
-                        <div key={i} className="py-[10px] px-[25px] border rounded-md">{type.type.name}</div>
-                    ))}
+                <div className="flex justify-around flex-col xl:flex-row items-center w-full gap-2 xl:gap-0">
+                    <div className="flex gap-2">
+
+                        {pokemon.types.map((type, i) => (
+                            <div key={i} className="py-[10px] px-[25px] border rounded-md">{type.type.name}</div>
+                        ))}
+                    </div>
                     <div>
                         <Button variant="outline" onClick={handleClick} className={`${favoritePokemons.includes(pokemon.name) && "text-red-600"}`}><FaHeart /></Button>
                     </div>

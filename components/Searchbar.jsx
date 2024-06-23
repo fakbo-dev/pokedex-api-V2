@@ -19,17 +19,17 @@ const Searchbar = ({ onSearchHandler }) => {
 
     return (
         <section>
-            <div className="container mx-auto flex justify-center items-center gap-2">
+            <div className="container mx-auto  flex flex-col xl:flex-row justify-center items-center gap-2">
                 <div>
                     <Input
                         placeholder="Busca tu pokemon"
                         onChange={handlePokemon}
-                        className="w-[60vw] text-black"
+                        className="  w-[60vw] text-black"
                         value={text}
                     />
                 </div>
                 <div>
-                    <Button variant="destructive" onClick={handleButtonClick}>Busca tu Pokemon</Button>
+                    <Button variant="destructive" onClick={handleButtonClick} className="text-[10px] xl:text-[14px]">Busca tu Pokemon</Button>
                 </div>
             </div>
         </section>

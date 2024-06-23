@@ -21,7 +21,7 @@ const Pokedex = ({ pokemons, loading, page, totalPages, setPage }) => {
 
                 {/* Header text */}
                 <div className="flex justify-between items-center text-black font-bold">
-                    <h1 className="text-4xl text-slate-950">Pokedex</h1>
+                    <h1 className="text-2xl xl:text-4xl text-slate-950">Pokedex</h1>
                     <Pagination
                         page={page + 1}
                         totalPages={totalPages}
