@@ -10,7 +10,7 @@ const searchPokemon = async (pokemon) => {
     }
 };
 
-const getPokemons = async (limit = 50, offset = 0) => {
+const getPokemons = async (limit = 51, offset = 0) => {
     try {
         const POKEMON_API_KEY = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
         const response = await fetch(POKEMON_API_KEY);

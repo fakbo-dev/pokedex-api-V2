@@ -23,7 +23,7 @@ module.exports = {
       poppins: "var(--font-poppins)",
     },
     backgroundImage: {
-      fondo: "url(/assets/bg.png)"
+      fondo: "url(/assets/fondo2.png)"
     },
     extend: {
       colors: {
