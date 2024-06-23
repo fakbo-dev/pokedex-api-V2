@@ -23,22 +23,26 @@ const Header = ({ }) => {
                             height={100}
                         />
                     </Link>
-                    <Button className="text-[8px] xl:text-[14px]">
-                        <Link href="/" className="flex items-center gap-2"><FaHome /></Link>
-                    </Button>
+                    <Link href="/" className="">
+                        <Button className=" xl:text-[14px] flex items-center gap-2" >
+                            inicio <FaHome />
+                        </Button>
+                    </Link>
                 </div>
                 {/* <h1 className="text-base text-center  xl:text-4xl md:text-3xl text-black font-bold  p-2 rounded-md">Fakbo Dev</h1> */}
                 <div className="flex items-center gap-2 ml-2">
-                    <Button className="text-[8px] xl:text-[14px]">
+                    {/* <Link href="/favorite" className="flex items-center gap-2 text-sm">
                         {favoritePokemons.length > 0 ? (
-                            <Link href="/" className="flex items-center gap-2 text-sm">
+                            <Button className="text-[8px] xl:text-[14px]">
                                 {favoritePokemons.length} <FaHeart className="text-red-700" />
-                            </Link>
+                            </Button>
                         ) : (
-                            "No favoritos"
+                            <Button className="text-[8px] xl:text-[14px]">
+                                0 Favoritos
+                            </Button>
                         )}
-                    </Button>
-                    <Button className="text-[10px] xl:text-[14px]"><Link href="https://github.com/fakbo-dev" target="_BLANK" className="flex items-center gap-2"><FaGithub className="text-[20px]" /></Link></Button>
+                    </Link> */}
+                    <Button className="text-[10px] xl:text-[14px]"><Link href="https://github.com/fakbo-dev" target="_BLANK" className="flex items-center gap-2" title="visita mi github fakbo dev">Visita mi Github<FaGithub className="text-[20px]" /></Link></Button>
                 </div>
             </nav>
         </header>

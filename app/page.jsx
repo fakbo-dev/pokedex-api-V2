@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Pokedex from "@/components/Pokedex"
 import Searchbar from "@/components/Searchbar"
 import { getPokemons, getPokemonsData, searchPokemon } from "@/components/Api"
+import Image from "next/image"
 import { FavProvider } from "@/components/favcontext"
 import Header from "@/components/Header"
 
@@ -88,11 +89,13 @@ const Home = () => {
     >
       <main className="h-full">
         <div className="container mx-auto">
-          <Header />
 
           <Searchbar onSearchHandler={onSearchHandler} />
           {notFound ? (
-            <div className="text-4xl text-black flex justify-center items-center mt-[80px] card font-bold">Pokemon no encontrado</div>
+            <div className="xl:text-4xl text-black flex justify-center flex-col  items-center mt-[80px] card font-bold">
+              <p>pokemon No encontrado</p>
+              <Image src="/assets/error.jpg" height={200} width={200} />
+            </div>
           ) : (
             <Pokedex
               pokemons={pokemons}
