@@ -21,7 +21,7 @@ const Pokemon = ({ pokemon }) => {
         updateFavoritesPokemons(pokemon.name);
     }
     return (
-        <Card className="flex flex-col">
+        <Card className={`flex flex-col  ${pokemon.types[0].type.name}`}>
             {/* Header */}
             <CardHeader className="flex">
                 <CardTitle className="self-center text-4xl font-extrabold">{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</CardTitle>
@@ -45,11 +45,11 @@ const Pokemon = ({ pokemon }) => {
                     <div className="flex gap-2">
 
                         {pokemon.types.map((type, i) => (
-                            <div key={i} className="py-[10px] px-[25px] border rounded-md">{type.type.name}</div>
+                            <div key={i} className={`py-[10px] px-[25px] border rounded-md ${type.type.name}  font-extrabold`}>{type.type.name}</div>
                         ))}
                     </div>
                     <div>
-                        <Button variant="outline" onClick={handleClick} className={`${favoritePokemons.includes(pokemon.name) && "text-red-600 hover:text-red-600"}`}><FaHeart /></Button>
+                        <Button variant="outline" onClick={handleClick} className={`${favoritePokemons.includes(pokemon.name) && "text-red-600 hover:text-red-600"} bg-transparent hover:bg-gray-200 transition-all delay-200`}><FaHeart /></Button>
                     </div>
                 </div>
             </CardFooter>

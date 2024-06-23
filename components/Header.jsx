@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { FaHome, FaHeart, FaGithub } from "react-icons/fa";
 import { useContext } from "react"
 import FavContext from "./favcontext";
-const Header = () => {
+const Header = ({ }) => {
     const { favoritePokemons } = useContext(FavContext);
     return (
         <header className="py-8 xl:py-12">
