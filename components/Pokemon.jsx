@@ -15,6 +15,7 @@ import {
 const Pokemon = ({ pokemon }) => {
     const { updateFavoritesPokemons, favoritePokemons } = useContext(FavContext);
     const pokemonUrl = pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default;
+    const pokemonUrlBase = pokemon.sprites.front_default;
 
     const handleClick = () => {
         updateFavoritesPokemons(pokemon.name);
@@ -30,7 +31,7 @@ const Pokemon = ({ pokemon }) => {
             {/* Content */}
             <CardContent className="flex justify-center items-center h-full w-full max-h-[200px] min-h-[200px]">
                 <Image
-                    src={pokemonUrl}
+                    src={pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default ? pokemonUrl : pokemonUrlBase}
                     alt={pokemon.name}
                     className="w-100 h-100"
                     width={100}
