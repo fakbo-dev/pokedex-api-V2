@@ -48,7 +48,7 @@ const Pokemon = ({ pokemon }) => {
                         ))}
                     </div>
                     <div>
-                        <Button variant="outline" onClick={handleClick} className={`${favoritePokemons.includes(pokemon.name) && "text-red-600"}`}><FaHeart /></Button>
+                        <Button variant="outline" onClick={handleClick} className={`${favoritePokemons.includes(pokemon.name) && "text-red-600 hover:text-red-600"}`}><FaHeart /></Button>
                     </div>
                 </div>
             </CardFooter>
